@@ -1,2 +1,2 @@
 # GoodPresentationTemplate
-![[presentation.pdf]]
+[](presentation.pdf)
