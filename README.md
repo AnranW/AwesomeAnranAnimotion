@@ -1,2 +1,2 @@
 # GoodPresentationTemplate
-[](GoodPresentationTemplate.pdf)
+[preview](GoodPresentationTemplate.pdf)
