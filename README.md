@@ -1,2 +1,2 @@
 # GoodPresentationTemplate
-![preview](GoodPresentationTemplate.pdf)
+A preview of the template can be seen [here](GoodPresentationTemplate.pdf). 
