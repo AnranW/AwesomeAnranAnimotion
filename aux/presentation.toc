@@ -1,7 +1,0 @@
-\babel@toc {english}{}\relax 
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{The name for subsection, it is hidden from every slide currently but you can change it in .sty file}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{If you have multiple subsections, you will have multiple lines on top of the slide}{4}{0}{1}
-\beamer@sectionintoc {2}{Body}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{More on images}{5}{0}{2}
-\beamer@sectionintoc {3}{Summary}{6}{0}{3}
