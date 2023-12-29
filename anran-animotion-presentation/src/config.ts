@@ -34,7 +34,7 @@ const options: Reveal.Options = {
 	// display mode used to show slides
 	display: 'grid',
 	// center slides on the screen
-	center: false,
+	center: true,
 	// auto-animate duration
 	autoAnimateDuration: 1,
 	// auto-animate easing
