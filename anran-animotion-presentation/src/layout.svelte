@@ -1,40 +1,25 @@
-
-
-
 <div>
+	<script>
+		let page=0; 
+		function newPage(){
+			document.getElementsByTagName('pagenumber')[page].innerHTML = (page+1).toString();
+			page++;
+		}
+	</script>
 
 	<topbar class="topbar" >
 		This is the structure area.  
 	</topbar>
 	<botbar class="botbar">
-		<script>
-			document.getElementById("authorname").innerHTML = "Anran Wang"
-			document.getElementById("shorttitle").innerHTML = "This is the title of your presentation."
-		</script>		
-		<div class="block w-[15%]"> <span id="authorname"> </div>
-		<div class="block w-[75%]"> <span id="shorttitle"> </div>
+		<div class="block w-[15%]"> Anran Wang </div>
+		<div class="block w-[75%]"> This is your title </div>
 		<div class="block w-[10%]">
-			<span id="pagenumber"> / <span id="totalpage">
-			<!-- <script>
-				newPage();
-				let pagenumber="pagenumber"+page.toString();
-			</script> -->
+			<pagenumber>
 		</div>
-		<script>
-			let page=0; 
-			function newPage(){
-				page++;
-				document.getElementById("pagenumber").setAttribute("id","pagenumber"+page) ;
-				document.getElementById("pagenumber1").innerHTML = page.toString(); 
-				document.getElementById("pagenumber1").setAttribute("id","pagenumber"+page) ;
-				document.getElementById("pagenumber2").setAttribute("id","pagenumber"+page) ;
-			}
-			newPage();
-		</script>
-
 	</botbar>
 
 	<div class="h-full p-16 middle">
+		<script>newPage();</script>
 		<slot />
 	</div>
 </div>
@@ -75,11 +60,10 @@
 	}
 	/* defines the body in the middle  */
 	.middle{
-		background: green;
+		background: yellowgreen;
 		position: fixed; 
 		top: 10%; 
 		height: 85%; 
 		width: 100%; 
 	}
-
 </style>

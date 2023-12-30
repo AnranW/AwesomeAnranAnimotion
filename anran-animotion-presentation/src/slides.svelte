@@ -1,26 +1,28 @@
 <script lang="ts">
-	import { tweened } from 'svelte/motion'
-	import { quadInOut } from 'svelte/easing'
-	import { Presentation, Slide, Code, Step } from '@components'
+	import { Presentation, Slide } from '@components'
 	import Layout from './layout.svelte'
-    import { svelte } from '@lib/languages/svelte';
 </script>
 
 <Presentation>	
-
-
+	<script>
+		let chapter=0;
+		function newChapter(){
+			chapter++;
+		}
+	</script>
 	<!-- intro -->
 	<Slide >
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				<div>
 					<img width="400" src="manim.svg" alt="logo" />
-					<p>Manim</p>
+					<p id="m">Manim</p>
 				</div>
 			</div>
 		</Layout>
 	</Slide>
 
+	<script>newChapter()</script>
 	<Slide animate>
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
@@ -37,4 +39,11 @@
 		</Layout>
 	</Slide>
 
+	<!-- to show slide number with total slide number  -->
+	<script>
+		const totalSlides = document.getElementsByTagName('pagenumber').length;
+		for (let i = 0; i < totalSlides; i++) {
+			document.getElementsByTagName('pagenumber')[i].textContent = (i+1).toString()+"/"+totalSlides.toString();
+		}
+	</script>
 </Presentation>
