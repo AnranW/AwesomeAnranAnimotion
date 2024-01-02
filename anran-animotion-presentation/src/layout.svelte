@@ -6,10 +6,19 @@
 			page++;
 		}
 	</script>
-
+	
 	<topbar class="topbar" >
-		This is the structure area.  
+		<div class="flex:1"> 1 </div>
+		<div class="flex:1"> 2 </div>
+		<div class="flex:1"> 3 </div>
+		<div class="flex:1"> 4 </div>
 	</topbar>
+	<!-- <script>
+		let c=3;
+		for (let i=0; i<c; i++){
+			document.getElementsByTagName('topbar')[0].innerHTML += "<div class=\"flex:1\">"+i.toString()+"</div>";
+		}
+	</script> -->
 	<botbar class="botbar">
 		<div class="block w-[15%]"> Anran Wang </div>
 		<div class="block w-[75%]"> This is your title </div>
@@ -36,8 +45,9 @@
 	/* defines the top bar  */
 	.topbar {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		/* justify-content: center; */
+		/* align-items: center; */
+		/* text-align: center; */
 		background-color: #0065BD;
 		position: fixed; 
 		left: 0%; 
