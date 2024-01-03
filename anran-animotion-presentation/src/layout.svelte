@@ -22,9 +22,9 @@
 
 <style>
 	.topbar{
-		margin-top: 0.5%;
+		margin-top: 0.5vh;
 		width:100%; 
-		height: 7%; 
+		height: 7vh; 
 		background: #0065BD; 
 		font-size:3vh;
 	}
@@ -41,9 +41,9 @@
 		background-color: #0065BD;
 		position: fixed; 
 		left: 0%; 
-		bottom: 0%; 
+		top: 95vh; 
 		width: 100%; 
-		height: 5%; 
+		height: 5vh; 
 		text-align: center;
 		display: flex;
 	}
@@ -51,8 +51,8 @@
 	.middle{
 		background: yellowgreen;
 		position: fixed; 
-		top: 7%; 
-		height: 88%; 
+		top: 7vh; 
+		height: 88vh; 
 		width: 100%; 
 	}
 </style>
