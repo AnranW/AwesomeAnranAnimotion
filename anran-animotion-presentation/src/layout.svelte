@@ -1,5 +1,5 @@
 <div>
-	<topbar class="table w-full h-10% bg-[#0065BD]" style="font-size:3vh" >
+	<topbar class="topbar table " >
 		<tr style="color: #8AB1DA;"> </tr>
 		<tr style="color: #8AB1DA;">  </tr>
 	</topbar>
@@ -13,14 +13,21 @@
 	</botbar>
 
 	<div class="h-full p-16 middle">
-		<slideID>here is slide id</slideID><br>
-		<test> test area </test>
+		<!-- <slideID>here is slide id</slideID><br> -->
+		<!-- <test> test area </test> -->
 		<script>newPage();</script>
 		<slot />
 	</div>
 </div>
 
 <style>
+	.topbar{
+		margin-top: 0.5%;
+		width:100%; 
+		height: 7%; 
+		background: #0065BD; 
+		font-size:3vh;
+	}
 	/* block inside of topbar or botbar  */
 	.block{
 		display: flex;
@@ -44,8 +51,8 @@
 	.middle{
 		background: yellowgreen;
 		position: fixed; 
-		top: 10%; 
-		height: 85%; 
+		top: 7%; 
+		height: 88%; 
 		width: 100%; 
 	}
 </style>

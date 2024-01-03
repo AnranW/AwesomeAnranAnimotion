@@ -19,12 +19,11 @@
 		var page=0; 
 		function newPage(){
 			page++; //note that page n has index n-1
-			document.getElementsByTagName("slideID")[page-1].innerHTML=page;
+			// document.getElementsByTagName("slideID")[page-1].innerHTML=page;
 			presentationData.push({chapternr: currentChapterNumber, chapter:currentChapterName,pagenr:page});
 		}
-
-
 	</script>
+	
 	<!-- intro -->
 	<script>newChapter("Introduction")</script>
 
@@ -134,7 +133,7 @@
 			document.getElementsByTagName('pagenumber')[i].textContent = (i+1).toString()+"/"+totalSlides.toString();
 			for (let j = 0; j < totalChapters; j++) {
 				// fill in chapter names
-				document.getElementsByTagName('tr')[i*2].innerHTML += "<th>"+chapterNames[j]+"</th>" ;
+				document.getElementsByTagName('tr')[i*2].innerHTML += "<th style=\"font-weight:normal\">"+chapterNames[j]+"</th>" ;
 				// document.getElementsByTagName("td")[i+].style.color="white";
 				// fill in dots
 				let slidesInChapter = presentationData.filter(item => item.chapter == chapterNames[j]);
