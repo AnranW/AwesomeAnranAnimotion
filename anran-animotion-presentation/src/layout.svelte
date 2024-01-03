@@ -1,7 +1,7 @@
 <div>
-	<topbar class="table w-full h-10% bg-[#0065BD]" style="font-size:4vh" >
-		<tr > </tr>
+	<topbar class="table w-full h-10% bg-[#0065BD]" style="font-size:3vh" >
 		<tr style="color: #8AB1DA;"> </tr>
+		<tr style="color: #8AB1DA;">  </tr>
 	</topbar>
 
 	<botbar class="botbar">
@@ -13,10 +13,10 @@
 	</botbar>
 
 	<div class="h-full p-16 middle">
-		<slideID>here is slide id</slideID>
+		<slideID>here is slide id</slideID><br>
+		<test> test area </test>
 		<script>newPage();</script>
 		<slot />
-		<test> test area </test>
 	</div>
 </div>
 
