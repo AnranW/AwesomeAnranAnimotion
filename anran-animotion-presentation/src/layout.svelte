@@ -1,24 +1,9 @@
 <div>
-	<script>
-		let page=0; 
-		function newPage(){
-			document.getElementsByTagName('pagenumber')[page].innerHTML = (page+1).toString();
-			page++;
-		}
-	</script>
-	
-	<topbar class="topbar" >
-		<div class="flex:1"> 1 </div>
-		<div class="flex:1"> 2 </div>
-		<div class="flex:1"> 3 </div>
-		<div class="flex:1"> 4 </div>
+	<topbar class="table w-full h-10% bg-[#0065BD]" style="font-size:4vh" >
+		<tr > </tr>
+		<tr style="color: #8AB1DA;"> </tr>
 	</topbar>
-	<!-- <script>
-		let c=3;
-		for (let i=0; i<c; i++){
-			document.getElementsByTagName('topbar')[0].innerHTML += "<div class=\"flex:1\">"+i.toString()+"</div>";
-		}
-	</script> -->
+
 	<botbar class="botbar">
 		<div class="block w-[15%]"> Anran Wang </div>
 		<div class="block w-[75%]"> This is your title </div>
@@ -28,8 +13,10 @@
 	</botbar>
 
 	<div class="h-full p-16 middle">
+		<slideID>here is slide id</slideID>
 		<script>newPage();</script>
 		<slot />
+		<test> test area </test>
 	</div>
 </div>
 
@@ -41,21 +28,6 @@
 		justify-content: center;
 		align-items: center;
 		font-size: 3vh;
-	}
-	/* defines the top bar  */
-	.topbar {
-		display: flex;
-		/* justify-content: center; */
-		/* align-items: center; */
-		/* text-align: center; */
-		background-color: #0065BD;
-		position: fixed; 
-		left: 0%; 
-		top: 0%; 
-		width: 100%; 
-		height: 10%; 
-		font-size: 8vh;
-		/* Viewport is the browser window size. 1vw = 1% of viewport width.  */
 	}
 	/* defines the bottom bar  */
 	.botbar{
