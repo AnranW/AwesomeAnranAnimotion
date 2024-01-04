@@ -1,7 +1,7 @@
 <div style="font-family:Arial, Helvetica, sans-serif">
 	<topbar class="topbar table " >
-		<tr data-name="chprow" style="color: var(--themecolorlight); vertical-align: bottom;"> </tr>
-		<tr data-name="dotrow" style="color: var(--themecolorlight);">  </tr>
+		<tr data-chprow="chprow" style="vertical-align: bottom;"> </tr>
+		<tr data-dotrow="dotrow">  </tr>
 	</topbar>
 
 	<botbar class="botbar">
@@ -33,6 +33,10 @@
 		height: 7vh; 
 		background: var(--themecolor); 
 		font-size:2.5vh;
+		color: var(--themecolorlight);
+		/* display: flex; */
+		/* flex-direction: row; */
+		/* grid-template-columns: auto auto auto auto auto auto; */
 	}
 	/* block inside of topbar or botbar  */
 	.block{

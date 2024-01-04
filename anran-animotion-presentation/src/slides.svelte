@@ -11,8 +11,8 @@
 		const subtitle = "And here is my subtitle";
 		const department = "Department of Informatics"; 
 		const university = "Technical University of Munich"; 
-		// the url of this presentation 
-		// const myURL="http://localhost:5173/"
+		// name of this tab
+		document.getElementsByTagName('title')[0].innerText=title;
 		var currentChapterName="";
 		var currentChapterNumber=0;
 		var chapterNames=[];
@@ -39,35 +39,39 @@
 			<div class="flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]">
 				<div>
 					<div class="text-[6vh]">
-						<script> document.currentScript.outerHTML=title; </script>
+						<span id="mytitle"> </span>
 					</div>
 					<br>
 					<div class="text-[4vh]">
-						<script> document.currentScript.outerHTML=subtitle; </script>
+						<span id="mysubtitle"> </span>
 					</div>
 				</div>
 			</div>
 			<br>
 			<div> 
-				<script> document.currentScript.outerHTML=author; </script>
+				<span id="myname"></span>
 			</div>
 			<br>
 			<div class="text-[3vh]"> 
-				<script> document.currentScript.outerHTML=department+"<br>"+university; </script>
+				<span id="myuni"></span>
 			</div>
 			<div class="text-[3.5vh]"> 
 				<br>
-				<script> 
-					let today = new Date(); 
-					document.currentScript.outerHTML=today.toISOString().split('T')[0]; 
-				</script>
+				<span id="mydate"></span>
 			</div>
 			<br>
 			<div class="flex items-center justify-center">
-				<img class="h-[10vh] align-middle" src="public/tum-logo.svg" alt="tum logo">
+				<img class="h-[10vh] align-middle" src="/tum-logo.svg" alt="tum logo">
 			</div>
-
-				
+			<!-- fill in the data for this presentation  -->
+			<script> 
+				document.getElementById("mytitle").innerHTML=title;
+				document.getElementById("mysubtitle").innerHTML=subtitle;
+				document.getElementById("myname").innerHTML=author;
+				document.getElementById("myuni").innerHTML=department+"<br>"+university;
+				let today = new Date(); 
+				document.getElementById("mydate").innerHTML=today.toISOString().split('T')[0]; 
+			</script>
 		</Layout>
 	</Slide>
 	<!-- TOC -->
@@ -149,56 +153,44 @@
 					<p>Manim</p>
 				</div>
 
-				<div>
-					<p>Motion Canvas</p>
-				</div>
-			</div>
-		</Layout>
-	</Slide>
-	<Slide>
-		<Layout>
-			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 3 page 1
-				<div>
-					<a href="#slide-4">  hello </a>
-					<p>Manim</p>
-				</div>
 
-				<div>
-					<p>Motion Canvas</p>
-				</div>
-			</div>
-		<test> test area </test>
+			<test> hi</test>
 		</Layout>
 	</Slide>
-	<script>
-		document.getElementsByClassName('Slide')[2].setAttribute("id", "slide-3");
-	</script>
+
+
 	<!-- to mimic the latex template  -->
 	<script>
 		const totalSlides = document.getElementsByTagName('pagenumber').length;
 		const totalChapters = chapterNames.length;
+		let row = ""; 
 		for (let i = 0; i < totalSlides; i++) {
-			// add id to slides after the fact 
 			// one section, one slide
 			document.getElementsByTagName('section')[i].setAttribute("id", "slide-"+(i+1));
 			// add author name 
 			document.getElementsByTagName('author')[i].innerText=author;
 			// add title 
-			document.getElementsByTagName('title')[i].innerText=title;
+			document.getElementsByTagName('title')[i+1].innerText=title;
+			// show slide number with total slide number
+			// document.getElementsByTagName('pagenumber')[i].outerHTML = "<pagenumber>"+(i+1)+"/"+totalSlides.toString();
+			document.querySelectorAll("pagenumber")[i].outerHTML = "<pagenumber>"+(i+1)+"/"+totalSlides.toString();
 		}
-		// show slide number with total slide number
 		for (let i = 0; i < totalSlides; i++) {
-			document.getElementsByTagName('pagenumber')[i].outerHTML = "<pagenumber>"+(i+1)+"/"+totalSlides.toString();
 			for (let j = 0; j < totalChapters; j++) {
 				// fill in chapter names
-				document.querySelectorAll("[data-name='chprow']")[i].innerHTML += "<th data-name=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
+				row = document.querySelectorAll("tr")[i]; 
+				if (row.hasAttribute("data-chprow")){
+					row.innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
+				}
 				// fill in dots
 				let slidesInChapter = presentationData.filter(item => item.chapter == chapterNames[j]);
 				let begin = slidesInChapter[0].pagenr;
 				let end = slidesInChapter[slidesInChapter.length-1].pagenr;
 				let circles=toCircle(begin,end);
-				document.querySelectorAll("[data-name='dotrow']")[i].innerHTML += "<td>"+ circles +"</td>";
+				row = document.querySelectorAll("tr")[i]; 
+				if (row.hasAttribute("data-dotrow")){
+					row.innerHTML += "<td>"+ circles +"</td>";
+				}
 			}
 			// first, find out if title page and toc exist 
 			let chapter0 = presentationData.filter(item => item.chapternr == 0).length;
@@ -209,7 +201,7 @@
 				circle.style.border="0px";
 				// also the chapter names 
 				let chapterNr = presentationData.filter(item => item.pagenr == i+1)[0].chapternr;
-				document.querySelectorAll("[data-name='chpcol']")[(i)*(totalChapters)+chapterNr-1].style.color="white";
+				document.querySelectorAll("data-chpcol")[(i)*(totalChapters)+chapterNr-1].style.color="white";
 			}
 		}
 		// circles: start, start+1, . . . , end are created
@@ -223,18 +215,10 @@
 		// to create table of contents
 		if (toc) {
 			for (i=1; i<=chapterNames.length;i++){
-				// document.getElementsByTagName('toc')[0].innerHTML += "<tr> <td> <div >"+i+ "</div> </td> <td>"+chapterNames[i-1]+"</td> </tr> ";
 				document.getElementsByTagName('chpicons')[0].innerHTML += "<div class=\"chpicon\">"+i+"</div> <br>";
 				document.getElementsByTagName('chpnames')[0].innerHTML += "<div>"+chapterNames[i-1]+"</div> <br>";
 			}
 		}
-	</script>
-
-	<script> 
-		// test area 
-		let chpicons = document.getElementsByTagName('chpnames');
-		document.getElementsByTagName('test')[0].innerHTML =chpicons.length;
-
 	</script>
 
 	<style>
@@ -251,6 +235,7 @@
 			border: 1.5px solid var(--themecolorlight);
 			display: inline-block;
 		}
+
 	</style>
 </Presentation>
 
