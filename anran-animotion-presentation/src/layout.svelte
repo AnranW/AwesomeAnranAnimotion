@@ -1,6 +1,6 @@
-<div>
+<div style="font-family:Arial, Helvetica, sans-serif">
 	<topbar class="topbar table " >
-		<tr style="color: #8AB1DA;"> </tr>
+		<tr style="color: #8AB1DA; vertical-align: bottom;"> </tr>
 		<tr style="color: #8AB1DA;">  </tr>
 	</topbar>
 
@@ -22,11 +22,11 @@
 
 <style>
 	.topbar{
-		margin-top: 0.5vh;
+		/* margin-top: 0.5vh; */
 		width:100%; 
 		height: 7vh; 
 		background: #0065BD; 
-		font-size:3vh;
+		font-size:2.5vh;
 	}
 	/* block inside of topbar or botbar  */
 	.block{
@@ -34,7 +34,7 @@
 		height:full; 
 		justify-content: center;
 		align-items: center;
-		font-size: 3vh;
+		font-size: 2.5vh;
 	}
 	/* defines the bottom bar  */
 	.botbar{
@@ -49,7 +49,8 @@
 	}
 	/* defines the body in the middle  */
 	.middle{
-		background: yellowgreen;
+		/* background: yellowgreen; */
+		color: black;
 		position: fixed; 
 		top: 7vh; 
 		height: 88vh; 
