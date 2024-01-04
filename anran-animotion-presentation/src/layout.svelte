@@ -1,12 +1,12 @@
 <div style="font-family:Arial, Helvetica, sans-serif">
 	<topbar class="topbar table " >
-		<tr style="color: #8AB1DA; vertical-align: bottom;"> </tr>
-		<tr style="color: #8AB1DA;">  </tr>
+		<tr data-name="chprow" style="color: var(--themecolorlight); vertical-align: bottom;"> </tr>
+		<tr data-name="dotrow" style="color: var(--themecolorlight);">  </tr>
 	</topbar>
 
 	<botbar class="botbar">
-		<div class="block w-[15%]"> Anran Wang </div>
-		<div class="block w-[75%]"> This is your title </div>
+		<author class="block w-[15%]">  </author>
+		<title class="block w-[75%]"> </title>
 		<div class="block w-[10%]">
 			<pagenumber>
 		</div>
@@ -21,11 +21,17 @@
 </div>
 
 <style>
+	:root{
+		--tumblue: #0065BD;
+		--secondblue: #8AB1DA;
+		--themecolor: var(--tumblue);
+		--themecolorlight: var(--secondblue);
+	}
 	.topbar{
 		/* margin-top: 0.5vh; */
 		width:100%; 
 		height: 7vh; 
-		background: #0065BD; 
+		background: var(--themecolor); 
 		font-size:2.5vh;
 	}
 	/* block inside of topbar or botbar  */
@@ -38,7 +44,7 @@
 	}
 	/* defines the bottom bar  */
 	.botbar{
-		background-color: #0065BD;
+		background-color: var(--themecolor); 
 		position: fixed; 
 		left: 0%; 
 		top: 95vh; 
