@@ -89,7 +89,6 @@
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 1 page 1
 				<div>
-					<img width="400" src="manim.svg" alt="logo" />
 					<p id="m">Manim</p>
 				</div>
 			</div>
@@ -101,12 +100,10 @@
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 1 page 2
 				<div>
-					<img width="400" src="manim.svg" alt="logo" />
 					<p>Manim</p>
 				</div>
 
 				<div>
-					<img width="400" src="motion-canvas.svg" alt="logo" />
 					<p>Motion Canvas</p>
 				</div>
 			</div>
@@ -119,12 +116,10 @@
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 2 page 1 °
 				<div>
-					<img width="400" src="manim.svg" alt="logo" />
 					<p>Manim</p>
 				</div>
 
 				<div>
-					<img width="400" src="motion-canvas.svg" alt="logo" />
 					<p>Motion Canvas</p>
 				</div>
 			</div>
@@ -137,12 +132,10 @@
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 3 page 1
 				<div>
-					<img width="400" src="manim.svg" alt="logo" />
 					<p>Manim</p>
 				</div>
 
 				<div>
-					<img width="400" src="motion-canvas.svg" alt="logo" />
 					<p>Motion Canvas</p>
 				</div>
 			</div>
@@ -153,12 +146,10 @@
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 3 page 1
 				<div>
-					<img width="400" src="manim.svg" alt="logo" />
 					<p>Manim</p>
 				</div>
 
 				<div>
-					<img width="400" src="motion-canvas.svg" alt="logo" />
 					<p>Motion Canvas</p>
 				</div>
 			</div>
@@ -169,13 +160,11 @@
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 3 page 1
 				<div>
-					<img width="400" src="manim.svg" alt="logo" />
 					<a href="#slide-4">  hello </a>
 					<p>Manim</p>
 				</div>
 
 				<div>
-					<img width="400" src="motion-canvas.svg" alt="logo" />
 					<p>Motion Canvas</p>
 				</div>
 			</div>
