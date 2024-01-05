@@ -1,8 +1,8 @@
 <div style="font-family:Arial, Helvetica, sans-serif">
-	<topbar class="topbar table " >
-		<tr data-chprow="chprow" style="vertical-align: bottom;"> </tr>
-		<tr data-dotrow="dotrow">  </tr>
-	</topbar>
+	<table class="topbar" >
+		<tr style="border-style:hidden;vertical-align: bottom;"> <td> </td>  </tr>
+		<tr style="border-style:hidden;"> <td> </td> </tr>
+	</table>
 
 	<botbar class="botbar">
 		<author class="block w-[15%]">  </author>
@@ -34,6 +34,8 @@
 		background: var(--themecolor); 
 		font-size:2.5vh;
 		color: var(--themecolorlight);
+		justify-content: center;
+		align-items: center;
 		/* display: flex; */
 		/* flex-direction: row; */
 		/* grid-template-columns: auto auto auto auto auto auto; */

@@ -92,9 +92,13 @@
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 1 page 1
-				<div>
-					<p id="m">Manim</p>
-				</div>
+<table>
+<tbody>
+
+	<tr> yoyoyo</tr>
+	<tr> again </tr>
+</tbody>
+</table>
 			</div>
 		</Layout>
 	</Slide>
@@ -114,7 +118,7 @@
 		</Layout>
 	</Slide>
 
-	<script>newChapter("The actual body of this presentation")</script>
+	<script>newChapter("The actual body of this presentation");</script>
 	<Slide>
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
@@ -130,7 +134,7 @@
 		</Layout>
 	</Slide>
 
-	<script> newChapter("To wrap it up") </script>
+	<script> newChapter("To wrap it up"); </script>
 	<Slide>
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
@@ -145,16 +149,15 @@
 			</div>
 		</Layout>
 	</Slide>
-	<Slide id="slide-4">
+	<Slide>
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 3 page 1
 				<div>
 					<p>Manim</p>
 				</div>
-
-
-			<test> hi</test>
+				<test> hi</test>
+			</div>
 		</Layout>
 	</Slide>
 
@@ -163,7 +166,7 @@
 	<script>
 		const totalSlides = document.getElementsByTagName('pagenumber').length;
 		const totalChapters = chapterNames.length;
-		let row = ""; 
+		var temp; 
 		for (let i = 0; i < totalSlides; i++) {
 			// one section, one slide
 			document.getElementsByTagName('section')[i].setAttribute("id", "slide-"+(i+1));
@@ -173,25 +176,34 @@
 			document.getElementsByTagName('title')[i+1].innerText=title;
 			// show slide number with total slide number
 			// document.getElementsByTagName('pagenumber')[i].outerHTML = "<pagenumber>"+(i+1)+"/"+totalSlides.toString();
-			document.querySelectorAll("pagenumber")[i].outerHTML = "<pagenumber>"+(i+1)+"/"+totalSlides.toString();
+			document.getElementsByTagName("pagenumber")[i].innerHTML = (i+1)+"/"+totalSlides;
 		}
 		for (let i = 0; i < totalSlides; i++) {
 			for (let j = 0; j < totalChapters; j++) {
 				// fill in chapter names
-				row = document.querySelectorAll("tr")[i]; 
-				if (row.hasAttribute("data-chprow")){
-					row.innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
-				}
+				// document.getElementsByTagName("test")[0].innerHTML+=document.getElementsByTagName("pagenumber").length; 
+				// document.getElementsByTagName("test")[0].innerHTML+=document.getElementsByTagName("pagenumber")[0]; 
+				temp = document.querySelectorAll("table.topbar")[i]; 
+				temp.getElementsByTagName("tr")[0].innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
+				// temp.firstChild.innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
+				document.getElementsByTagName("test")[0].innerHTML="here!"; 
+				// temp = document.getElementsByTagName("tr")[i*2]; 
+				// if (temp.hasAttribute("data-chprow")){
+				// 	temp.innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
+				// }
 				// fill in dots
 				let slidesInChapter = presentationData.filter(item => item.chapter == chapterNames[j]);
 				let begin = slidesInChapter[0].pagenr;
 				let end = slidesInChapter[slidesInChapter.length-1].pagenr;
 				let circles=toCircle(begin,end);
-				row = document.querySelectorAll("tr")[i]; 
-				if (row.hasAttribute("data-dotrow")){
-					row.innerHTML += "<td>"+ circles +"</td>";
-				}
+				temp.getElementsByTagName("tr")[1].innerHTML += "<td>"+ circles +"</td>";
+				// temp = document.getElementsByTagName("tr")[i*2+1]; 
+				// if (temp.hasAttribute("data-dotrow")){
+				// 	temp.innerHTML += "<td>"+ circles +"</td>";
+				// }
 			}
+		}
+		for (let i = 0; i < totalSlides; i++) {
 			// first, find out if title page and toc exist 
 			let chapter0 = presentationData.filter(item => item.chapternr == 0).length;
 			if (i>=chapter0){
@@ -201,7 +213,11 @@
 				circle.style.border="0px";
 				// also the chapter names 
 				let chapterNr = presentationData.filter(item => item.pagenr == i+1)[0].chapternr;
-				document.querySelectorAll("data-chpcol")[(i)*(totalChapters)+chapterNr-1].style.color="white";
+				temp = document.getElementsByTagName("th")[(i)*(totalChapters)+chapterNr-1];
+				if (temp.hasAttribute("data-chpcol")){ 
+					temp.style.color="white";
+				}
+				// document.querySelectorAll("data-chpcol")[(i)*(totalChapters)+chapterNr-1].style.color="white";
 			}
 		}
 		// circles: start, start+1, . . . , end are created
@@ -220,7 +236,7 @@
 			}
 		}
 	</script>
-
+	
 	<style>
 		.chpicon{
 			color: white;
@@ -235,7 +251,5 @@
 			border: 1.5px solid var(--themecolorlight);
 			display: inline-block;
 		}
-
 	</style>
 </Presentation>
-
