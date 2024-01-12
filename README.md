@@ -4,13 +4,13 @@ A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides).
 
 # Features
 - Automatically calculated total slide number. 
-    ![](public/pagenumber.png)
+    ![](public/pagenumber.png | width=20)
 - Automatically generated navigation bar on top, including separation into chapters. 
     ![](public/navibar.png)
 - Highligt current slide in navigation bar. 
     ![](public/highlight.png)
 - Hyperlink to corresponding slides. 
-    ![](public/goto.png)
+    ![](public/goto.png | width=50)
 
 Note that this project is still under development, bugs can exist and features can change. 
 
