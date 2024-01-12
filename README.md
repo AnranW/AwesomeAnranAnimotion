@@ -1,3 +1,11 @@
+- [Intro](#intro)
+- [Features](#features)
+- [Technical details](#technical-details)
+- [Setup, usage, and deployment](#setup-usage-and-deployment)
+  - [Setup](#setup)
+  - [Usage](#usage)
+  - [Deployment](#deployment)
+
 # Intro
 This is **AwesomeAnranSlides**, built upon [Animotion](https://animotion.pages.dev). 
 A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides). 
