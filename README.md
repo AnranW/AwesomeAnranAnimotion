@@ -71,3 +71,4 @@ Declare a new chapter with chapter name.
 ## Deployment
 For deployment, see [Vite](https://vitejs.dev/guide/static-deploy.html). 
 
+The YAML file can be found at [.github/workflows/deploy.yml](.github/workflows/deploy.yml). 
