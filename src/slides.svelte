@@ -11,8 +11,6 @@
 		const subtitle = "And here is my subtitle";
 		const department = "Department of Informatics"; 
 		const university = "Technical University of Munich"; 
-		// name of this tab
-		document.getElementsByTagName('title')[0].innerText=title;
 		var currentChapterName="";
 		var currentChapterNumber=0;
 		var chapterNames=[];
