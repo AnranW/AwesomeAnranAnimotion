@@ -3,14 +3,18 @@ This is **AwesomeAnranSlides**, built upon [Animotion](https://animotion.pages.d
 A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides). 
 
 # Features
-- Automatically calculated total slide number. 
-    ![](public/pagenumber.png|width=200)
+- Automatically calculated total slide number.
+
+    <img src="public/pagenumber.png" style="width:5vw">
 - Automatically generated navigation bar on top, including separation into chapters. 
+
     ![](public/navibar.png)
 - Highligt current slide in navigation bar. 
+
     ![](public/highlight.png)
 - Hyperlink to corresponding slides. 
-    ![](public/goto.png | width=50)
+
+    <img src="public/goto.png" style="width:20vw">
 
 Note that this project is still under development, bugs can exist and features can change. 
 
