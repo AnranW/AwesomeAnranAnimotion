@@ -1,24 +1,24 @@
 # Intro
-This is AwesomeAnranSlides, built upon [Animotion](https://animotion.pages.dev). 
+This is **AwesomeAnranSlides**, built upon [Animotion](https://animotion.pages.dev). 
 A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides). 
 
 # Features
 - Automatically calculated total slide number. 
-    ![public/pagenumber.png]
+    ![[public/pagenumber.png]]
 - Automatically generated navigation bar on top, including separation into chapters. 
-    ![public/navibar.png]
+    ![[public/navibar.png]]
 - Highligt current slide in navigation bar. 
-    ![public/highlight.png]
+    ![[public/highlight.png]]
 - Hyperlink to corresponding slides. 
-    ![public/goto.png]
+    ![[public/goto.png]]
 
 Note that this project is still under development, bugs can exist and features can change. 
 
 # Technical details
 The most important modifications are in the following files: 
-- src/layout.svelte : define the layout 
-- src/slides.svelte : includes the scripts that implements the features
-- src/config.ts : activate custom layout, etc.
+- [src/layout.svelte](src/layout.svelte) : define the layout 
+- [src/slides.svelte](src/slides.svelte) : includes the scripts that implements the features
+- [src/config.ts](src/config.ts) : activate custom layout, etc.
 
 # Setup, usage, and deployment
 ## Setup
@@ -51,9 +51,9 @@ Use layout inside <Slide>.
 </Layout>
 ```
 
-Declare a new chapter. 
+Declare a new chapter with chapter name. 
 ```html
-<script>newChapter("Introduction")</script>
+<script>newChapter("Chapter Name")</script>
 ```
 
 ## Deployment
