@@ -26,7 +26,6 @@
 		var page=0; 
 		function newPage(){
 			page++; //note that page n has index n-1
-			// document.getElementsByTagName("slideID")[page-1].innerHTML=page;
 			presentationData.push({chapternr: currentChapterNumber, chapter:currentChapterName,pagenr:page});
 		}
 	</script>
@@ -74,7 +73,9 @@
 	</Slide>
 	<!-- TOC -->
 	<Slide>
-		<script>toc=true;</script>
+		<script>
+			toc=true; // decides whether to generate table of content page
+		</script>
 		<Layout>
 			<toc class="flex h-full items-center justify-center gap-[100px]">
 				<chpicons> </chpicons>
@@ -85,18 +86,10 @@
 	
 	<!-- intro -->
 	<script>newChapter("Introduction")</script>
-
 	<Slide>
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 1 page 1
-<table>
-<tbody>
-
-	<tr> yoyoyo</tr>
-	<tr> again </tr>
-</tbody>
-</table>
 			</div>
 		</Layout>
 	</Slide>
@@ -105,13 +98,6 @@
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 1 page 2
-				<div>
-					<p>Manim</p>
-				</div>
-
-				<div>
-					<p>Motion Canvas</p>
-				</div>
 			</div>
 		</Layout>
 	</Slide>
@@ -120,14 +106,7 @@
 	<Slide>
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 2 page 1 °
-				<div>
-					<p>Manim</p>
-				</div>
-
-				<div>
-					<p>Motion Canvas</p>
-				</div>
+				chapter 2 page 1 
 			</div>
 		</Layout>
 	</Slide>
@@ -137,13 +116,6 @@
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 3 page 1
-				<div>
-					<p>Manim</p>
-				</div>
-
-				<div>
-					<p>Motion Canvas</p>
-				</div>
 			</div>
 		</Layout>
 	</Slide>
@@ -151,9 +123,6 @@
 		<Layout>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 3 page 1
-				<div>
-					<p>Manim</p>
-				</div>
 				<test> hi</test>
 			</div>
 		</Layout>
@@ -173,32 +142,20 @@
 			// add title 
 			document.getElementsByTagName('title')[i+1].innerText=title;
 			// show slide number with total slide number
-			// document.getElementsByTagName('pagenumber')[i].outerHTML = "<pagenumber>"+(i+1)+"/"+totalSlides.toString();
 			document.getElementsByTagName("pagenumber")[i].innerHTML = (i+1)+"/"+totalSlides;
 		}
 		for (let i = 0; i < totalSlides; i++) {
 			for (let j = 0; j < totalChapters; j++) {
 				// fill in chapter names
-				// document.getElementsByTagName("test")[0].innerHTML+=document.getElementsByTagName("pagenumber").length; 
-				// document.getElementsByTagName("test")[0].innerHTML+=document.getElementsByTagName("pagenumber")[0]; 
 				temp = document.querySelectorAll("table.topbar")[i]; 
 				temp.getElementsByTagName("tr")[0].innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
-				// temp.firstChild.innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
 				document.getElementsByTagName("test")[0].innerHTML="here!"; 
-				// temp = document.getElementsByTagName("tr")[i*2]; 
-				// if (temp.hasAttribute("data-chprow")){
-				// 	temp.innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
-				// }
 				// fill in dots
 				let slidesInChapter = presentationData.filter(item => item.chapter == chapterNames[j]);
 				let begin = slidesInChapter[0].pagenr;
 				let end = slidesInChapter[slidesInChapter.length-1].pagenr;
 				let circles=toCircle(begin,end);
 				temp.getElementsByTagName("tr")[1].innerHTML += "<td>"+ circles +"</td>";
-				// temp = document.getElementsByTagName("tr")[i*2+1]; 
-				// if (temp.hasAttribute("data-dotrow")){
-				// 	temp.innerHTML += "<td>"+ circles +"</td>";
-				// }
 			}
 		}
 		for (let i = 0; i < totalSlides; i++) {
