@@ -140,7 +140,7 @@
 			// add author name 
 			document.getElementsByTagName('author')[i].innerText=author;
 			// add title 
-			document.getElementsByTagName('title')[i+1].innerText=title;
+			document.getElementsByTagName('mytitle')[i].innerHTML="<a href=\"#slide-1\">"+title+"</a>";
 			// show slide number with total slide number
 			document.getElementsByTagName("pagenumber")[i].innerHTML = (i+1)+"/"+totalSlides;
 		}
@@ -172,7 +172,6 @@
 				if (temp.hasAttribute("data-chpcol")){ 
 					temp.style.color="white";
 				}
-				// document.querySelectorAll("data-chpcol")[(i)*(totalChapters)+chapterNr-1].style.color="white";
 			}
 		}
 		// circles: start, start+1, . . . , end are created

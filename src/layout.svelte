@@ -6,7 +6,7 @@
 
 	<botbar class="botbar">
 		<author class="block w-[15%]">  </author>
-		<title class="block w-[75%]"> </title>
+		<mytitle class="block w-[75%]"> </mytitle>
 		<div class="block w-[10%]">
 			<pagenumber>
 		</div>
