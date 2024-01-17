@@ -44,7 +44,7 @@ const options: Reveal.Options = {
 	// hide cursor
 	hideInactiveCursor: true,
 	// time before cursor is hidden (ms)
-	hideCursorTime: 0,
+	hideCursorTime: 3000,
 
 	/*
 		Shows current slide number in the URL and
