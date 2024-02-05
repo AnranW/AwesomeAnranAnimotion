@@ -205,5 +205,21 @@
 			border: 1.5px solid var(--themecolorlight);
 			display: inline-block;
 		}
+
+		ul.a {
+			list-style-type: square;
+			padding-top:4vh;
+		}
+		ul.b {
+			list-style-type: circle;
+			margin-left:5vh;
+			margin-right:5vh;
+			padding-top:2vh;
+		}
+		ul{
+			text-align: left;
+			margin-left:20vh;
+			margin-right:5vh;
+		}
 	</style>
 </Presentation>
