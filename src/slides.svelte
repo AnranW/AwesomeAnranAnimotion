@@ -33,7 +33,7 @@
 	<!-- title page -->
 	<Slide>
 		<Layout>
-			<div class="flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]">
+			<div class="m-16 flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]">
 				<div>
 					<div class="text-[6vh]">
 						<span id="mytitle"> </span>
@@ -88,6 +88,9 @@
 	<script>newChapter("Introduction")</script>
 	<Slide>
 		<Layout>
+			<div class="titlebar">
+				This is the title
+			</div>
 			<div class="flex h-full items-center justify-center gap-[100px]">
 				chapter 1 page 1
 			</div>

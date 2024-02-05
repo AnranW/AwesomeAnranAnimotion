@@ -12,7 +12,7 @@
 		</div>
 	</botbar>
 
-	<div class="h-full p-16 middle">
+	<div class="h-full middle">
 		<!-- <slideID>here is slide id</slideID><br> -->
 		<!-- <test> test area </test> -->
 		<script>newPage();</script>
