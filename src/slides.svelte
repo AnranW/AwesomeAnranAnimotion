@@ -205,7 +205,15 @@
 			border: 1.5px solid var(--themecolorlight);
 			display: inline-block;
 		}
-
+		.titlebar{
+			background: rgb(242,242,242); 
+			width: Z_FULL_FLUSH; 
+			height: 9vh; 
+			text-align: left;
+			padding-left: 2vh; 
+			padding-top: 2vh;
+			font-size: 5vh;
+		}
 		ul.a {
 			list-style-type: square;
 			padding-top:4vh;
