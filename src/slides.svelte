@@ -31,46 +31,44 @@
 	</script>
 
 	<!-- title page -->
-	<Slide>
-		<Layout>
-			<div class="m-16 flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]">
-				<div>
-					<div class="text-[6vh]">
-						<span id="mytitle"> </span>
-					</div>
-					<br>
-					<div class="text-[4vh]">
-						<span id="mysubtitle"> </span>
-					</div>
+	<Slide><Layout>
+		<div class="m-16 flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]">
+			<div>
+				<div class="text-[6vh]">
+					<span id="mytitle"> </span>
+				</div>
+				<br>
+				<div class="text-[4vh]">
+					<span id="mysubtitle"> </span>
 				</div>
 			</div>
+		</div>
+		<br>
+		<div> 
+			<span id="myname"></span>
+		</div>
+		<br>
+		<div class="text-[3vh]"> 
+			<span id="myuni"></span>
+		</div>
+		<div class="text-[3.5vh]"> 
 			<br>
-			<div> 
-				<span id="myname"></span>
-			</div>
-			<br>
-			<div class="text-[3vh]"> 
-				<span id="myuni"></span>
-			</div>
-			<div class="text-[3.5vh]"> 
-				<br>
-				<span id="mydate"></span>
-			</div>
-			<br>
-			<div class="flex items-center justify-center">
-				<img class="h-[10vh] align-middle" src="/AwesomeAnranSlides/tum-logo.svg" alt="tum logo">
-			</div>
-			<!-- fill in the data for this presentation  -->
-			<script> 
-				document.getElementById("mytitle").innerHTML=title;
-				document.getElementById("mysubtitle").innerHTML=subtitle;
-				document.getElementById("myname").innerHTML=author;
-				document.getElementById("myuni").innerHTML=department+"<br>"+university;
-				let today = new Date(); 
-				document.getElementById("mydate").innerHTML=today.toISOString().split('T')[0]; 
-			</script>
-		</Layout>
-	</Slide>
+			<span id="mydate"></span>
+		</div>
+		<br>
+		<div class="flex items-center justify-center">
+			<img class="h-[10vh] align-middle" src="/AwesomeAnranSlides/tum-logo.svg" alt="tum logo">
+		</div>
+		<!-- fill in the data for this presentation  -->
+		<script> 
+			document.getElementById("mytitle").innerHTML=title;
+			document.getElementById("mysubtitle").innerHTML=subtitle;
+			document.getElementById("myname").innerHTML=author;
+			document.getElementById("myuni").innerHTML=department+"<br>"+university;
+			let today = new Date(); 
+			document.getElementById("mydate").innerHTML=today.toISOString().split('T')[0]; 
+		</script>
+	</Layout></Slide>
 	<!-- TOC -->
 	<Slide>
 		<script>
@@ -86,50 +84,52 @@
 	
 	<!-- intro -->
 	<script>newChapter("Introduction")</script>
-	<Slide>
-		<Layout>
-			<div class="titlebar">
-				This is the title
-			</div>
-			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 1 page 1
-			</div>
-		</Layout>
-	</Slide>
+	<Slide><Layout>
+		<titlebar > Here is the title for this slide </titlebar>
+		<mybody>
+			<ul class="a">
+				<li>Press F to enter full screen.</li>
+				<ul class="b"> 
+					<li>To better check the layout.</li>
+				</ul>
+				<br>
+				<li>Press fn+s to enter presenter mode.</li>
+			</ul>
+		</mybody>
+	</Layout></Slide>
 
-	<Slide>
-		<Layout>
-			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 1 page 2
-			</div>
-		</Layout>
-	</Slide>
+	<Slide><Layout>
+		<titlebar > Here is the title for this slide </titlebar>
+		<mybody>
+			<figure>
+				<img src="tum-logo.svg" alt="tumlogo" class="mx-auto my-[2vh]">
+				<figcaption> This is an example of figure with caption. </figcaption>
+			</figure>
+		</mybody>
+	</Layout></Slide>
 
 	<script>newChapter("The actual body of this presentation");</script>
-	<Slide>
-		<Layout>
-			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 2 page 1 
+	<Slide><Layout>
+		<titlebar > Here is a grid of images </titlebar>
+		<mybody>			
+			<div class="grid mt-[10vh] mx-[10vh]" style="grid-template-columns: auto auto auto;">
+				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
 			</div>
-		</Layout>
-	</Slide>
+		</mybody>
+	</Layout></Slide>
 
 	<script> newChapter("To wrap it up"); </script>
-	<Slide>
-		<Layout>
-			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 3 page 1
-			</div>
-		</Layout>
-	</Slide>
-	<Slide>
-		<Layout>
-			<div class="flex h-full items-center justify-center gap-[100px]">
-				chapter 3 page 1
-				<test> hi</test>
-			</div>
-		</Layout>
-	</Slide>
+	<Slide><Layout>
+		<titlebar > Here is the title for this slide </titlebar>
+		<div class="flex h-full items-center justify-center gap-[100px]">
+			This template is still work on progress. 
+		</div>
+	</Layout></Slide>
 
 
 	<!-- to mimic the latex template  -->
@@ -152,7 +152,7 @@
 				// fill in chapter names
 				temp = document.querySelectorAll("table.topbar")[i]; 
 				temp.getElementsByTagName("tr")[0].innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
-				document.getElementsByTagName("test")[0].innerHTML="here!"; 
+				// document.getElementsByTagName("test")[0].innerHTML="here!"; 
 				// fill in dots
 				let slidesInChapter = presentationData.filter(item => item.chapter == chapterNames[j]);
 				let begin = slidesInChapter[0].pagenr;
@@ -208,15 +208,6 @@
 			border: 1.5px solid var(--themecolorlight);
 			display: inline-block;
 		}
-		.titlebar{
-			background: rgb(242,242,242); 
-			width: Z_FULL_FLUSH; 
-			height: 9vh; 
-			text-align: left;
-			padding-left: 2vh; 
-			padding-top: 2vh;
-			font-size: 5vh;
-		}
 		ul.a {
 			list-style-type: square;
 			padding-top:4vh;
@@ -231,6 +222,36 @@
 			text-align: left;
 			margin-left:20vh;
 			margin-right:5vh;
+		}
+		titlebar{
+			position:absolute;
+			top:0;
+			left:0;
+			background: rgb(242,242,242); 
+			width: 100vw; 
+			height: 9vh; 
+			text-align: left;
+			padding-left: 5vh; 
+			padding-top: 2vh;
+			font-size: 5vh;
+		}
+		mybody{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height:79vh;
+		}
+		figure {
+			border: 0px #cccccc solid;
+			padding: 4px;
+			margin: auto;
+		}
+		figcaption {
+			background-color: rgb(242,242,242);
+			color: black;
+			font-style: italic;
+			padding: 2px;
+			text-align: center;
 		}
 	</style>
 </Presentation>

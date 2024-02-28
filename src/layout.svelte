@@ -32,7 +32,7 @@
 		width:100%; 
 		height: 7vh; 
 		background: var(--themecolor); 
-		font-size:2.5vh;
+		font-size:2vh;
 		color: var(--themecolorlight);
 		justify-content: center;
 		align-items: center;
@@ -46,7 +46,7 @@
 		height:full; 
 		justify-content: center;
 		align-items: center;
-		font-size: 2.5vh;
+		font-size: 2vh;
 	}
 	/* defines the bottom bar  */
 	.botbar{
