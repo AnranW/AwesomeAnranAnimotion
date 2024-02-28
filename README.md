@@ -17,7 +17,7 @@ A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides).
 - Automatically generated navigation bar on top, including separation into chapters. 
 
     ![](public/navibar.png)
-- Highligt current slide in navigation bar. 
+- Highlight current slide in navigation bar. 
 
     ![](public/highlight.png)
 - Hyperlink to corresponding slides. 
