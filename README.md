@@ -1,3 +1,15 @@
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/AnranW/AwesomeAnranAnimotion">
+    <img src="public/Automation-StatusUpdatesLogo.png" alt="Logo" width="330" height="120">
+  </a>
+
+  <h3 align="center">Awesome Anran Animotion</h3>
+
+  <p align="center">
+    Awesome presentation slides for local and online use!
+
 - [Intro](#intro)
 - [Features](#features)
   - [This Template](#this-template)
