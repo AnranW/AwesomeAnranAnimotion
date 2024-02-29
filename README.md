@@ -108,13 +108,19 @@ Optional: more building options can be found in the YAML file at [.github/workfl
 For more details, see [Vite](https://vitejs.dev/guide/static-deploy.html). 
 
 # Troubleshooting
-## Empty HTML content with error message like "server returned with status 404"
+- **Issue:** Any.
+**Possible solution:** Inspect errors by pressing alt+ctl+i or opt+cmd+i to locate which slide is the problematic one. 
+
+- **Issue:** Empty HTML content with error message like "server returned with status 404"
 **Possible solution:** Check that the "base" is set correctly in [vite.config.ts](vite.config.ts). 
 
-## Images not showing despite presence in "public/" folder
-**Possible solution:** add or remove the slash in front of the relative path of the image files, depending on whether a slash is present at the end of "base" configuration in [vite.config.ts](vite.config.ts). 
+- **Issue:** Images not showing despite being in "public/" folder
+**Possible solution:** Add or remove the slash in front of the relative path of the image files, depending on whether a slash is present at the end of "base" configuration in [vite.config.ts](vite.config.ts). 
 
-## Circles on top of the slides not showing
+- **Issue:** Circles on top of the slides not showing
 **Possible reason:** JavaScript codes at the end of [slides.svelte](src/slides.svelte) was not executed to the end because of errors due to absent bug catching and assertions that are to be implemented.
 
-**Possible solution:** inspect errors by pressing alt+ctl+i or opt+cmd+i to locate which slide is the problematic one. 
+- **Issue:** Layout elements missing and "Uncaught TypeError: slidesInChapter[0] is undefined"
+**Possible reason:** This can happen if a chapter is defined but has no slides- just make sure to add some content to each slide-code-block.
+
+
