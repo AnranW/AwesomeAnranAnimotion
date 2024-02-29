@@ -9,6 +9,7 @@
 
   <p align="center">
     Awesome presentation slides for local and online use!
+</div>
 
 - [Intro](#intro)
 - [Features](#features)
