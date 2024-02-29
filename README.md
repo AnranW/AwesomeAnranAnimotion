@@ -7,7 +7,7 @@
   - [Deployment](#deployment)
 
 # Intro
-This is **AwesomeAnranSlides**, built upon [Animotion](https://animotion.pages.dev). 
+This is **AwesomeAnranAnimotion**, built upon [Animotion](https://animotion.pages.dev). 
 
 A preview of the slides built with this template can be found [here](https://AnranW.github.io/AwesomeAnranSlides). 
 
