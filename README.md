@@ -50,17 +50,19 @@ Run the development server at http://localhost:5173/.
 ```sh
 pnpm run dev
 ```
-Build and preview deploy.
-```sh
-pnpm run build && pnpm run preview
-```
+
 
 ## Usage
-Include the layout file in [slides.svelte](/src/slides.svelte). 
+Include the layout file at the beginning of [slides.svelte](/src/slides.svelte). 
 ```html
 <script>
     import Layout from './layout.svelte'
 </script>
+```
+
+Declare a new chapter with chapter name. 
+```html
+<script>newChapter("Chapter Name")</script>
 ```
 
 Use layout inside <Slide>. 
@@ -70,16 +72,42 @@ Use layout inside <Slide>.
 </Layout>
 ```
 
-Declare a new chapter with chapter name. 
+Use title bars as needed: 
 ```html
-<script>newChapter("Chapter Name")</script>
+<titlebar>
+    ...
+</titlebar>
 ```
 
+Use "mybody" tag for centering layout as needed: 
+```html
+<mybody>
+    ...
+</mybody>
+```
+
+
 ## Deployment
-For more details, see [Vite](https://vitejs.dev/guide/static-deploy.html). 
+Build and preview deploy.
+```sh
+pnpm run build && pnpm run preview
+```
 
 1. Change configuration for "base" into the name of your repository at the last line of [vite.config.ts](vite.config.ts). 
 2. Go to repository **Settings->Pages->Build and deployment->Source and select** *GitHub Actions*. 
 
 Optional: more building options can be found in the YAML file at [.github/workflows/deploy.yml](.github/workflows/deploy.yml). 
 
+For more details, see [Vite](https://vitejs.dev/guide/static-deploy.html). 
+
+# Troubleshooting
+## Empty HTML content with error message like "server returned with status 404"
+**Possible solution:** Check that the "base" is set correctly in [vite.config.ts](vite.config.ts). 
+
+## Images not showing despite presence in "public/" folder
+**Possible solution:** add or remove the slash in front of the relative path of the image files, depending on whether a slash is present at the end of "base" configuration in [vite.config.ts](vite.config.ts). 
+
+## Circles on top of the slides not showing
+**Possible reason:** JavaScript codes at the end of [slides.svelte](src/slides.svelte) was not executed to the end because of errors due to absent bug catching and assertions that are to be implemented.
+
+**Possible solution:** inspect errors by pressing alt+ctl+i or opt+cmd+i to locate which slide is the problematic one. 
