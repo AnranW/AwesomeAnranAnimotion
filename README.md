@@ -1,10 +1,17 @@
 - [Intro](#intro)
 - [Features](#features)
+  - [This Template](#this-template)
+  - [Animotion package](#animotion-package)
 - [Technical details](#technical-details)
 - [Setup, usage, and deployment](#setup-usage-and-deployment)
   - [Setup](#setup)
   - [Usage](#usage)
   - [Deployment](#deployment)
+- [Troubleshooting](#troubleshooting)
+  - [Empty HTML content with error message like "server returned with status 404"](#empty-html-content-with-error-message-like-server-returned-with-status-404)
+  - [Images not showing despite presence in "public/" folder](#images-not-showing-despite-presence-in-public-folder)
+  - [Circles on top of the slides not showing](#circles-on-top-of-the-slides-not-showing)
+
 
 # Intro
 This is **AwesomeAnranAnimotion**, built upon [Animotion](https://animotion.pages.dev). 
