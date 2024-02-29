@@ -69,8 +69,10 @@ Declare a new chapter with chapter name.
 ```
 
 ## Deployment
-For deployment, see [Vite](https://vitejs.dev/guide/static-deploy.html). 
+For more details, see [Vite](https://vitejs.dev/guide/static-deploy.html). 
 
-The YAML file can be found at [.github/workflows/deploy.yml](.github/workflows/deploy.yml). 
+1. Change configuration for "base" into the name of your repository at the last line of [vite.config.ts](vite.config.ts). 
+2. Go to repository **Settings->Pages->Build and deployment->Source and select** *GitHub Actions*. 
 
-Make sure to change configuration for "base" into the name of your repository in [vite.config.ts](vite.config.ts). 
+Optional: more building options can be found in the YAML file at [.github/workflows/deploy.yml](.github/workflows/deploy.yml). 
+
