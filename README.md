@@ -21,9 +21,6 @@
   - [Usage](#usage)
   - [Deployment](#deployment)
 - [Troubleshooting](#troubleshooting)
-  - [Empty HTML content with error message like "server returned with status 404"](#empty-html-content-with-error-message-like-server-returned-with-status-404)
-  - [Images not showing despite presence in "public/" folder](#images-not-showing-despite-presence-in-public-folder)
-  - [Circles on top of the slides not showing](#circles-on-top-of-the-slides-not-showing)
 
 
 # Intro
