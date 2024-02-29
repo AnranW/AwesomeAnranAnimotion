@@ -1,7 +1,14 @@
 <script lang="ts">
-	import { Presentation, Slide } from '@components'
+	import { Presentation, Slide, Notes } from '@components'
 	import Layout from './layout.svelte'
 </script>
+
+<!-- Typical Errors
+	
+	"Uncaught TypeError: slidesInChapter[0] is undefined" and layout elements missing.
+	→ This can happen if a chapter is defined but has no slides.
+
+-->
 
 <Presentation>	
 	<script>
@@ -85,7 +92,7 @@
 	<!-- intro -->
 	<script>newChapter("Introduction")</script>
 	<Slide><Layout>
-		<titlebar > Here is the title for this slide </titlebar>
+		<titlebar > On how to use these Presentation Slides  </titlebar>
 		<mybody>
 			<ul class="a">
 				<li>Press F to enter full screen.</li>
@@ -94,21 +101,75 @@
 				</ul>
 				<br>
 				<li>Press fn+s to enter presenter mode.</li>
+				<ul class="b"> 
+					<li>Where you can see the next slide.</li>
+					<li>And read your notes for each slide.</li>
+				</ul>
 			</ul>
+		</mybody>
+	</Layout>
+	<Notes>
+		These are some presenter notes that can help during the actual presentation.<br>
+		They are displayed on the presenter's screen if "presenter mode" has been entered.
+	</Notes></Slide>
+
+	
+
+	<script>newChapter("Text");</script>
+	<Slide><Layout>
+		<titlebar > Simple Text </titlebar>
+		<mybody>
+			<div class="flex h-full items-center justify-center gap-[100px]">
+				You can add text, and different media files such as<br> 
+				images, pdfs, videos to your presentation slides.<br>
+				The following slides showcase some of these applications<br> 
+				for easy reproduction.
+			</div>
 		</mybody>
 	</Layout></Slide>
 
 	<Slide><Layout>
-		<titlebar > Here is the title for this slide </titlebar>
+		<titlebar > A List of Text Items </titlebar>
+		<mybody>
+			<ul class="a" >
+				<li>The First Text Item.</li>
+				<ul class="b"> 
+					<li>The 1. Sub-Item.</li>
+				</ul>
+				<br>
+				<li>The Second Text Item.</li>
+				<ul class="b"> 
+					<li>The 2. Sub-Item.</li>
+					<ul class="c"> 
+						<li>Sub-Sub-Item a.</li>
+						<li>Sub-Sub-Item b.</li>
+					</ul>
+					<li>The 3. Sub-Item.</li>
+				</ul>
+				<br>
+				<li>The Third Text Item.</li>
+				<ul class="b"> 
+					<li>The 4. Sub-Item.</li>
+				</ul>
+			</ul>
+		</mybody>
+	</Layout>
+	<Notes>
+		These are some presenter notes that can help during the actual presentation.<br>
+		They are displayed on the presenter's screen if "presenter mode" has been entered.
+	</Notes></Slide>
+
+	<script> newChapter("Images"); </script>
+	<Slide><Layout>
+		<titlebar > An Image with a Caption </titlebar>
 		<mybody>
 			<figure>
 				<img src="tum-logo.svg" alt="tumlogo" class="mx-auto my-[2vh]">
-				<figcaption> This is an example of figure with caption. </figcaption>
+				<figcaption> This is an example figure with caption. </figcaption>
 			</figure>
 		</mybody>
 	</Layout></Slide>
 
-	<script>newChapter("The actual body of this presentation");</script>
 	<Slide><Layout>
 		<titlebar > Here is a grid of images </titlebar>
 		<mybody>			
@@ -119,6 +180,111 @@
 				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
 				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
 				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+			</div>
+		</mybody>
+	</Layout></Slide>
+
+	<script> newChapter("PDFs"); </script>
+	<Slide><Layout>
+		<titlebar > Another PDF File as part of the Slide Deck </titlebar>
+		<mybody>			
+			<div class="h-[75vh] w-[90vw] mx-auto my-auto">
+				<iframe src="media-sample.pdf#page=1&zoom=100" frameBorder="0" scrolling="auto" height="100%" width="100%" title="ESSV Publication"></iframe>
+			</div>
+		</mybody>
+	</Layout></Slide>
+
+	<script> newChapter("Videos"); </script>
+	<Slide><Layout>
+		<titlebar > Single Video with multiple available Captions </titlebar>
+		<mybody>
+			<figure>
+				<video controls class="w-[50vw] h-[44vh] mx-auto my-auto p-2">
+					<source src="media-never_gonna_give_you_up-video_medium-43_51.mp4" type="video/mp4" />
+					<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt"/>
+					<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt"/>
+					<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt" default/>
+					<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt"/>
+				</video>
+				<figcaption> Play a video file from the repository.<br> </figcaption>
+			</figure>
+		</mybody>
+	</Layout></Slide>
+
+	<Slide><Layout>
+		<titlebar > Multiple Videos on the same Slide </titlebar>
+		<mybody>
+			<figure>
+				<video controls class="w-[50vw] h-[44vh] mx-auto my-auto p-2" loop>
+					<source src="media-never_gonna_give_you_up-video_medium-43_51.mp4" type="video/mp4" />
+					<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt"/>
+					<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt"/>
+					<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt" default/>
+					<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt"/>
+				</video>
+				<figcaption> Video that loops.<br>Default caption: Chinese. </figcaption>
+			</figure>
+
+			<figure>
+				<video controls class="w-[50vw] h-[44vh] mx-auto my-auto p-2">
+					<source src="media-never_gonna_give_you_up-video_medium-43_51.mp4" type="video/mp4" />
+					<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt" default/>
+					<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt"/>
+					<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt"/>
+					<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt"/>
+				</video>
+				<figcaption> Video without looping.<br>Default caption: English. </figcaption>
+			</figure>
+		</mybody>
+	</Layout></Slide>
+
+	<Slide><Layout>
+		<titlebar > Multiple Videos in a Grid </titlebar>
+		<mybody>
+			<div class="grid mx-auto my-auto" style="grid-template-columns: auto auto;">
+				<figure>
+					<video controls class="w-[50vw] h-[40vh] mx-auto my-auto p-2" loop>
+						<source src="media-never_gonna_give_you_up-video_medium-00_06.mp4" type="video/mp4" />
+						<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt" default/>
+						<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt"/>
+						<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt"/>
+						<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt"/>
+					</video>
+					<figcaption class="text-[2vh]"> Video with default caption: English. </figcaption>
+				</figure>
+	
+				<figure>
+					<video controls class="w-[50vw] h-[40vh] mx-auto my-auto p-2" loop>
+						<source src="media-never_gonna_give_you_up-video_medium-06_12.mp4" type="video/mp4" />
+						<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt"/>
+						<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt" default/>
+						<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt"/>
+						<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt"/>
+					</video>
+					<figcaption class="text-[2vh]"> Video with default caption: German. </figcaption>
+				</figure>
+	
+				<figure>
+					<video controls class="w-[50vw] h-[40vh] mx-auto my-auto p-2" loop>
+						<source src="media-never_gonna_give_you_up-video_medium-12_18.mp4" type="video/mp4" />
+						<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt"/>
+						<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt"/>
+						<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt" default/>
+						<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt"/>
+					</video>
+					<figcaption class="text-[2vh]"> Video with default caption: Chinese. </figcaption>
+				</figure>
+	
+				<figure>
+					<video controls class="w-[50vw] h-[40vh] mx-auto my-auto p-2" loop>
+						<source src="media-never_gonna_give_you_up-video_medium-18_24.mp4" type="video/mp4" />
+						<track kind="captions" label="English" srclang="eng" src="media-video-captions-eng.vtt"/>
+						<track kind="captions" label="German" srclang="deu" src="media-video-captions-deu.vtt"/>
+						<track kind="captions" label="Chinese" srclang="zho" src="media-video-captions-zho.vtt"/>
+						<track kind="captions" label="Chinese Pinyin" srclang="zho" src="media-video-captions-zhopinyin.vtt" default/>
+					</video>
+					<figcaption class="text-[2vh]"> Video with default caption: Chinese Pinyin. </figcaption>
+				</figure>
 			</div>
 		</mybody>
 	</Layout></Slide>
@@ -210,18 +376,28 @@
 		}
 		ul.a {
 			list-style-type: square;
-			padding-top:4vh;
+			padding-top:5vh;
 		}
 		ul.b {
 			list-style-type: circle;
 			margin-left:5vh;
 			margin-right:5vh;
-			padding-top:2vh;
+			padding-top:1vh;
+			padding-bottom:1vh;
+		}
+		ul.c {
+			list-style-type: disc;
+			margin-left:10vh;
+			margin-right:5vh;
+			padding-top:1vh;
+			padding-bottom:1vh;
 		}
 		ul{
 			text-align: left;
 			margin-left:20vh;
 			margin-right:5vh;
+			padding-top:1vh;
+			padding-bottom:1vh;
 		}
 		titlebar{
 			position:absolute;
