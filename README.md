@@ -11,6 +11,8 @@ This is **AwesomeAnranSlides**, built upon [Animotion](https://animotion.pages.d
 A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides). 
 
 # Features
+## This Template
+Note that this project is still under development, bugs can exist and features can change. 
 - Automatically calculated total slide number.
 
     <img src="public/pagenumber.png" style="width:5vw">
@@ -24,7 +26,11 @@ A preview can be found [here](https://AnranW.github.io/AwesomeAnranSlides).
 
     <img src="public/goto.png" style="width:20vw">
 
-Note that this project is still under development, bugs can exist and features can change. 
+## [Animotion](https://animotion.pages.dev) package
+- Automatic animation.
+- Better code presentation.
+- Multimedia support (audios, videos, scrollable pdf...)
+- And so much [more](https://animotion.pages.dev/docs)...
 
 # Technical details
 The most important modifications are in the following files: 
