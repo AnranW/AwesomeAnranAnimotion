@@ -196,6 +196,16 @@
 
 	<script> newChapter("Videos"); </script>
 	<Slide><Layout>
+		<titlebar > Single Animated gif File (no sound) </titlebar>
+		<mybody>
+			<figure>
+				<img src="https://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves" class="w-[75vw] h-[75vh] mx-auto my-auto p-2" />
+				<figcaption> Stock-Gif of a Slowpoke for testing gif-display.<br> </figcaption>
+			</figure>
+		</mybody>
+	</Layout></Slide>
+	
+	<Slide><Layout>
 		<titlebar > Single Video with multiple available Captions </titlebar>
 		<mybody>
 			<figure>
