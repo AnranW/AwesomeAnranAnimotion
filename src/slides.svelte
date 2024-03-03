@@ -64,7 +64,7 @@
 		</div>
 		<br>
 		<div class="flex items-center justify-center">
-			<img class="h-[10vh] align-middle" src="/AwesomeAnranSlides/tum-logo.svg" alt="tum logo">
+			<img class="h-[10vh] align-middle" src="/tum-logo.svg" alt="tum logo">
 		</div>
 		<!-- fill in the data for this presentation  -->
 		<script> 
