@@ -26,7 +26,7 @@
 # Intro
 This is **AwesomeAnranAnimotion**, built upon [Animotion](https://animotion.pages.dev). 
 
-A preview of the slides built with this template can be found [here](https://AnranW.github.io/AwesomeAnranSlides). 
+A preview of the slides built with this template can be found [here](https://AnranW.github.io/AwesomeAnranAnimotion). 
 
 # Features
 ## This Template
