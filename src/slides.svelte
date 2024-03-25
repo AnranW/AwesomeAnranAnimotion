@@ -165,7 +165,7 @@
 		<titlebar > An Image with a Caption </titlebar>
 		<mybody>
 			<figure>
-				<img src="tum-logo.svg" alt="tumlogo" class="mx-auto my-[2vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="mx-auto my-[2vh]">
 				<figcaption> This is an example figure with caption. </figcaption>
 			</figure>
 		</mybody>
@@ -175,12 +175,12 @@
 		<titlebar > Here is a grid of images </titlebar>
 		<mybody>			
 			<div class="grid mt-[10vh] mx-[10vh]" style="grid-template-columns: auto auto auto;">
-				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
-				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
-				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
-				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
-				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
-				<img src="tum-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
+				<img src="title-logo.svg" alt="tumlogo" class="h-[40vh] px-[5vh]">
 			</div>
 		</mybody>
 	</Layout></Slide>
