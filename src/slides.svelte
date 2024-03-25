@@ -13,7 +13,8 @@
 <Presentation>	
 	<script>
 		// information about this presentation 
-		const author = "Anran Wang"; 
+		const author = "Anran Wang, Christian Schuler"; 
+		const authorshort = "Wang, Schuler"; 
 		const title = "This Is My Own Title";
 		const subtitle = "And here is my subtitle";
 		const department = "Department of Informatics"; 
@@ -64,7 +65,7 @@
 		</div>
 		<br>
 		<div class="flex items-center justify-center">
-			<img class="h-[10vh] align-middle" src="tum-logo.svg" alt="tum logo">
+			<img class="h-[10vh] align-middle" src="title-logo.svg" alt="tum logo">
 		</div>
 		<!-- fill in the data for this presentation  -->
 		<script> 
@@ -317,7 +318,7 @@
 			// one section, one slide
 			document.getElementsByTagName('section')[i].setAttribute("id", "slide-"+(i+1));
 			// add author name 
-			document.getElementsByTagName('author')[i].innerText=author;
+			document.getElementsByTagName('author')[i].innerText=authorshort;
 			// add title 
 			document.getElementsByTagName('mytitle')[i].innerHTML="<a href=\"#slide-1\">"+title+"</a>";
 			// show slide number with total slide number
@@ -410,9 +411,7 @@
 			padding-bottom:1vh;
 		}
 		titlebar{
-			position:absolute;
-			top:0;
-			left:0;
+			display: flex;
 			background: rgb(242,242,242); 
 			width: 100vw; 
 			height: 9vh; 
