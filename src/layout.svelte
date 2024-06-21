@@ -1,8 +1,19 @@
-<div style="font-family:Arial, Helvetica, sans-serif">
+<!-- does not work well with browser where toolbar is not hidable -->
+<div style="font-family:Arial, Helvetica, sans-serif" class="w-[100vw] h-[100vh]"> 
 	<table class="topbar" >
 		<tr style="border-style:hidden;vertical-align: bottom;"> <td> </td>  </tr>
 		<tr style="border-style:hidden;"> <td> </td> </tr>
 	</table>
+
+
+	<div class="h-full middle">
+		<!-- <slideID>here is slide id</slideID><br> -->
+		<!-- <test> test area </test> -->
+		<script>newPage();</script>
+		<middle> 
+			<slot />
+		</middle>
+	</div>
 
 	<botbar class="botbar">
 		<author class="block w-[15%]">  </author>
@@ -11,13 +22,6 @@
 			<pagenumber>
 		</div>
 	</botbar>
-
-	<div class="h-full middle">
-		<!-- <slideID>here is slide id</slideID><br> -->
-		<!-- <test> test area </test> -->
-		<script>newPage();</script>
-		<slot />
-	</div>
 </div>
 
 <style>
@@ -28,9 +32,8 @@
 		--themecolorlight: var(--secondblue);
 	}
 	.topbar{
-		/* margin-top: 0.5vh; */
 		width:100%; 
-		height: 7vh; 
+		height: 7%; 
 		background: var(--themecolor); 
 		font-size:2vh;
 		color: var(--themecolorlight);
@@ -53,9 +56,9 @@
 		background-color: var(--themecolor); 
 		position: fixed; 
 		left: 0%; 
-		top: 95vh; 
+		bottom: 0; 
 		width: 100%; 
-		height: 5vh; 
+		height: 5%; 
 		text-align: center;
 		display: flex;
 	}
@@ -64,8 +67,8 @@
 		/* background: yellowgreen; */
 		color: black;
 		position: fixed; 
-		top: 7vh; 
-		height: 88vh; 
+		top: 7%; 
+		height: 88%; 
 		width: 100%; 
 	}
 </style>
